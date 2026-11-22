@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunday 22 November 2026</title>
+<style>
+  :root {
+    --paper: #f4f0e8; --ink: #14120f; --mute: #5a544b; --rule: #27231e;
+    --red: #b3261e; --me: #c0392b; --am: #2e7d32; --eu: #1f4e8c; --as: #8e44ad; --af: #c77c0e; --gl: #37474f; --sp: #00838f; --oc: #d35400;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1024px; height: 1024px; background: var(--paper); color: var(--ink); overflow: hidden; }
+  body { font-family: "Segoe UI", Arial, sans-serif; position: relative; }
+  .serif { font-family: Georgia, "Times New Roman", serif; }
+  .abs { position: absolute; }
+
+  #top { left: 14px; right: 14px; top: 8px; height: 20px; border-top: 3px solid var(--rule); border-bottom: 1px solid var(--rule);
+         display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+  #top .red { color: var(--red); }
+  #date { left: 50%; transform: translateX(-50%); top: 34px; font-size: 80px; line-height: 92px; font-weight: 700; letter-spacing: -.025em; white-space: nowrap; }
+  #sub { left: 14px; right: 14px; top: 130px; height: 20px; border-top: 1px solid var(--rule); border-bottom: 3px double var(--rule);
+         text-align: center; font-size: 11.5px; font-weight: 700; letter-spacing: .14em; line-height: 17px; }
+  #lead { left: 14px; right: 14px; top: 154px; text-align: center; font-size: 19px; font-style: italic; white-space: nowrap; }
+  #lead b { color: var(--red); font-style: normal; padding: 0 6px; }
+
+  #stats { left: 14px; right: 14px; top: 184px; height: 50px; display: grid; grid-template-columns: repeat(6, 1fr);
+           border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .st { display: flex; align-items: center; gap: 6px; padding: 0 8px; border-left: 1px solid #bdb3a0; }
+  .st:first-child { border-left: 0; }
+  .st .n { font-family: Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1; white-space: nowrap; }
+  .st .t { font-size: 10.5px; line-height: 12px; color: var(--mute); }
+
+  .hero { top: 242px; width: 324px; height: 262px; }
+  .hero svg { display: block; border: 1px solid var(--rule); background: #fbf8f1; }
+  .tag { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; color: #fff; padding: 2px 6px; margin-top: 6px; }
+  .num { display: inline-block; width: 17px; height: 17px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 10.5px;
+         font-weight: 800; text-align: center; line-height: 17px; margin-right: 4px; vertical-align: 1px; }
+  .loc { font-size: 10.5px; font-weight: 700; letter-spacing: .06em; color: var(--mute); margin-left: 4px; }
+  .hero h2 { font-family: Georgia, serif; font-size: 23px; line-height: 25px; margin-top: 3px; }
+  .hero p { font-size: 11.5px; line-height: 14px; margin-top: 4px; }
+  .src { font-size: 9.5px; letter-spacing: .06em; color: var(--mute); margin-top: 3px; text-transform: uppercase; }
+
+  #cards { left: 14px; right: 14px; top: 512px; height: 226px; display: grid; grid-template-columns: repeat(4, 1fr);
+           grid-template-rows: 1fr 1fr; gap: 8px; }
+  .card { border-top: 4px solid var(--ink); background: #fbf8f1; padding: 5px 7px 4px; display: grid; grid-template-columns: 58px 1fr;
+          grid-template-rows: auto auto 1fr; column-gap: 7px; overflow: hidden; }
+  .card .ic { grid-row: span 3; text-align: center; }
+  .card .ic svg { display: block; margin: 2px auto 0; }
+  .card .big { font-family: Georgia, serif; font-size: 18px; font-weight: 700; line-height: 18px; margin-top: 1px; white-space: nowrap; }
+  .card .bl { font-size: 8.5px; color: var(--mute); letter-spacing: .04em; text-transform: uppercase; }
+  .card .k { font-size: 9.5px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+  .card h3 { font-family: Georgia, serif; font-size: 16px; line-height: 18px; margin-top: 2px; }
+  .card p { font-size: 10.5px; line-height: 12.5px; margin-top: 3px; color: #2b261f; }
+
+  #maphead, #listhead { top: 746px; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
+  #maphead { left: 14px; } #listhead { left: 386px; }
+  .hd { background: var(--ink); color: #fff; padding: 2px 6px; }
+  #map { left: 14px; top: 766px; }
+  #list { left: 386px; top: 766px; width: 624px; display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column;
+          grid-template-rows: repeat(11, 17.6px); column-gap: 12px; }
+  .li { display: flex; gap: 5px; align-items: center; font-size: 11px; line-height: 13px; border-bottom: 1px dotted #a99f8c; white-space: nowrap; overflow: hidden; }
+  .li .num { flex: 0 0 17px; margin: 0; }
+  .li b { font-weight: 800; white-space: nowrap; }
+
+  #check { left: 14px; right: 14px; top: 966px; height: 34px; border: 1.5px solid var(--red); padding: 3px 8px; font-size: 10.5px; line-height: 13px; }
+  #check .rk { color: var(--red); font-weight: 800; letter-spacing: .08em; }
+  #foot { left: 14px; right: 14px; top: 1004px; text-align: center; font-size: 10.5px; color: var(--mute); }
+</style>
+</head>
+<body>
+
+<div id="top" class="abs"><span>THE WORLD ON ONE PAGE</span><span class="red">DAY 326 OF 2026</span><span>ALL TIMES UTC · RANKED BY CONSEQUENCE</span></div>
+<div id="date" class="abs serif">Sunday 22 November 2026</div>
+<div id="sub" class="abs">33 STORIES · 8 REGIONS · EVERY ONE HAPPENED OR WAS FIRST REPORTED ON SUNDAY 22 NOVEMBER 2026</div>
+<div id="lead" class="abs serif">COP31 deal rejected<b>◆</b>Drone strike buries 14 near Kyiv<b>◆</b>Indonesia factory fire: 36 missing</div>
+
+<div id="stats" class="abs">
+  <div class="st"><span class="n">+2</span><span class="t">days past COP31’s Friday deadline</span></div>
+  <div class="st"><span class="n">14</span><span class="t">missing in Dymer flats, Zelensky says</span></div>
+  <div class="st"><span class="n">36</span><span class="t">missing after Banten factory fire</span></div>
+  <div class="st"><span class="n">12</span><span class="t">cars torched by settlers (Wafa)</span></div>
+  <div class="st"><span class="n">720</span><span class="t">India’s record Test total in NZ</span></div>
+  <div class="st"><span class="n">20</span><span class="t">age of both world chess finalists</span></div>
+</div>
+
+<!-- HERO 1: COP31 -->
+<div class="hero abs" style="left:14px">
+  <svg width="324" height="132" viewBox="0 0 324 132">
+    <rect width="324" height="132" fill="#e3e8ea"/>
+    <text x="12" y="18" font-size="10" font-weight="800" fill="#37474f" letter-spacing="1" font-family="Segoe UI">COP31 · DUE TO END FRI 20</text>
+    <g font-family="Segoe UI" font-weight="700" text-anchor="middle">
+      <rect x="12" y="28" width="26" height="26" fill="#546e7a"/><text x="25" y="46" fill="#fff" font-size="12">19</text>
+      <rect x="42" y="28" width="26" height="26" fill="#16130f"/><text x="55" y="46" fill="#fff" font-size="12">20</text>
+      <rect x="72" y="28" width="26" height="26" fill="#90a4ae"/><text x="85" y="46" fill="#fff" font-size="12">21</text>
+      <rect x="102" y="22" width="38" height="38" fill="#b3261e"/><text x="121" y="47" fill="#fff" font-size="17">22</text>
+      <text x="55" y="66" fill="#16130f" font-size="8">DEADLINE</text>
+      <text x="121" y="72" fill="#b3261e" font-size="10">+2 DAYS</text>
+    </g>
+    <!-- EU ring of stars -->
+    <g transform="translate(46,100)">
+      <circle r="20" fill="#1f4e8c"/>
+      <g fill="#f1c40f" font-size="7" text-anchor="middle" font-family="Segoe UI">
+        <text x="0" y="-11">★</text><text x="9" y="-6">★</text><text x="12" y="3">★</text><text x="8" y="12">★</text><text x="0" y="15">★</text>
+        <text x="-8" y="12">★</text><text x="-12" y="3">★</text><text x="-9" y="-6">★</text>
+      </g>
+    </g>
+    <text x="74" y="96" font-size="11" font-weight="800" fill="#16130f" font-family="Segoe UI">EU, UK + others:</text>
+    <text x="74" y="112" font-size="15" font-weight="800" fill="#b3261e" font-family="Georgia">“too weak”</text>
+    <!-- rejected draft -->
+    <g transform="translate(186,14)">
+      <rect width="124" height="106" fill="#fff" stroke="#37474f" stroke-width="1.5"/>
+      <text x="8" y="15" font-size="9" font-weight="800" fill="#37474f" font-family="Segoe UI">PRESIDENCY FINAL DRAFT</text>
+      <g stroke="#b0bec5" stroke-width="3"><path d="M8,26 h100"/><path d="M8,36 h80"/><path d="M8,46 h96"/><path d="M8,90 h70"/><path d="M8,98 h90"/></g>
+      <text x="9" y="62" font-size="9" font-style="italic" fill="#5a544b" font-family="Georgia">fossil fuels: no mention</text>
+      <g transform="translate(62,78) rotate(-12)">
+        <rect x="-52" y="-13" width="104" height="24" fill="none" stroke="#b3261e" stroke-width="3"/>
+        <text x="0" y="5" font-size="15" font-weight="800" fill="#b3261e" text-anchor="middle" font-family="Segoe UI" letter-spacing="2">REJECTED</text>
+      </g>
+    </g>
+  </svg>
+  <span class="tag" style="background:var(--gl)">GLOBAL · CLIMATE</span><span class="loc"><span class="num">1</span>ANTALYA, TÜRKIYE</span>
+  <h2>COP31 talks break down as EU rejects deal</h2>
+  <p>The EU, UK and some developing nations reject a final text that omits fossil fuels; the longest climate summit yet ends deeply split.</p>
+  <div class="src">Guardian · BBC · Al Jazeera</div>
+</div>
+
+<!-- HERO 2: Ukraine -->
+<div class="hero abs" style="left:350px">
+  <svg width="324" height="132" viewBox="0 0 324 132">
+    <rect width="324" height="132" fill="#dfe5ee"/>
+    <!-- five-storey block with collapsed section -->
+    <g transform="translate(18,30)">
+      <path d="M0,92 V8 H58 V30 L70,40 L80,34 L88,46 V92 Z" fill="#cfc8bb" stroke="#16130f" stroke-width="1.5"/>
+      <path d="M88,92 V46 L96,52 L104,44 L112,58 V92 Z" fill="#8d8476" stroke="#16130f" stroke-width="1.2"/>
+      <g fill="#5a6b80">
+        <rect x="8" y="16" width="10" height="9"/><rect x="26" y="16" width="10" height="9"/><rect x="44" y="16" width="10" height="9"/>
+        <rect x="8" y="32" width="10" height="9"/><rect x="26" y="32" width="10" height="9"/><rect x="44" y="32" width="10" height="9"/>
+        <rect x="8" y="48" width="10" height="9"/><rect x="26" y="48" width="10" height="9"/><rect x="44" y="48" width="10" height="9"/><rect x="62" y="50" width="10" height="9"/>
+        <rect x="8" y="64" width="10" height="9"/><rect x="26" y="64" width="10" height="9"/><rect x="44" y="64" width="10" height="9"/><rect x="62" y="66" width="10" height="9"/>
+        <rect x="8" y="78" width="10" height="9"/><rect x="26" y="78" width="10" height="9"/><rect x="44" y="78" width="10" height="9"/><rect x="62" y="80" width="10" height="9"/>
+      </g>
+      <path d="M90,92 l6,-10 l8,6 l6,-8 l6,12 z" fill="#6d6458"/>
+      <path d="M74,30 q6,-14 16,-18" fill="none" stroke="#7f8c8d" stroke-width="4" opacity=".6"/>
+    </g>
+    <!-- drone -->
+    <g transform="translate(128,22)" fill="#16130f"><path d="M0,6 L22,0 L18,6 L22,12 Z"/><rect x="-8" y="4" width="10" height="4"/></g>
+    <path d="M124,30 Q108,40 98,56" fill="none" stroke="#b3261e" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="16" y="20" font-size="10" font-weight="800" fill="#1f4e8c" font-family="Segoe UI">DYMER, KYIV REGION</text>
+    <!-- figures -->
+    <text x="168" y="54" font-size="34" font-weight="800" fill="#b3261e" font-family="Georgia">14</text>
+    <text x="212" y="40" font-size="10" font-weight="800" fill="#16130f" font-family="Segoe UI">MISSING UNDER</text>
+    <text x="212" y="53" font-size="10" font-weight="800" fill="#16130f" font-family="Segoe UI">THE RUBBLE</text>
+    <text x="168" y="70" font-size="9" fill="#3a2f22" font-family="Segoe UI">5-storey block hit overnight; 2 hurt</text>
+    <!-- ship still burning off Finland -->
+    <rect x="160" y="82" width="156" height="42" fill="#b9d2e0" stroke="#16130f" stroke-width=".8"/>
+    <g transform="translate(170,108)"><path d="M0,0 h36 l-6,8 h-26 z" fill="#2c3e50"/><rect x="22" y="-7" width="8" height="7" fill="#2c3e50"/><path d="M8,-2 q3,-12 5,-14 q5,7 3,14z" fill="#e67e22"/></g>
+    <text x="214" y="98" font-size="9" font-weight="800" fill="#1f4e8c" font-family="Segoe UI">GULF OF FINLAND</text>
+    <text x="214" y="110" font-size="8.5" fill="#16130f" font-family="Segoe UI">Russia-bound ship</text>
+    <text x="214" y="120" font-size="8.5" fill="#16130f" font-family="Segoe UI">still ablaze on Sunday</text>
+  </svg>
+  <span class="tag" style="background:var(--eu)">EUROPE · WAR</span><span class="loc"><span class="num">2</span>KYIV REGION, UKRAINE</span>
+  <h2>Drone strike buries 14 in flats near Kyiv</h2>
+  <p>Zelensky says at least 14 are missing after a Russian drone hit a five-storey block in Dymer; off Finland, the struck cargo ship Sparta II burns on.</p>
+  <div class="src">France 24 · Reuters · Al Jazeera</div>
+</div>
+
+<!-- HERO 3: Indonesia -->
+<div class="hero abs" style="left:686px">
+  <svg width="324" height="132" viewBox="0 0 324 132">
+    <rect width="324" height="132" fill="#d3e4ea"/>
+    <path d="M0,0 H46 L22,28 L0,34 Z" fill="#e6dcc4" stroke="#8a7a5a"/>
+    <path d="M14,56 L32,44 L60,40 L92,44 L124,42 L160,46 L196,48 L196,80 L160,82 L124,78 L84,76 L44,72 L18,66 Z" fill="#e6dcc4" stroke="#8a7a5a"/>
+    <text x="6" y="12" font-size="8" fill="#6b5b3a" letter-spacing="1" font-family="Segoe UI">SUMATRA</text>
+    <text x="120" y="68" font-size="12" font-weight="800" fill="#6b5b3a" letter-spacing="3" font-family="Segoe UI">JAVA</text>
+    <circle cx="62" cy="44" r="3" fill="#16130f"/><text x="68" y="36" font-size="8.5" font-weight="700" fill="#16130f" font-family="Segoe UI">JAKARTA</text>
+    <circle cx="36" cy="50" r="9" fill="#8e44ad" opacity=".25"/><circle cx="36" cy="50" r="4.5" fill="#8e44ad" stroke="#fff" stroke-width="1.5"/>
+    <text x="8" y="96" font-size="10" font-weight="800" fill="#6a1b9a" font-family="Segoe UI">BANTEN PROVINCE</text>
+    <text x="8" y="108" font-size="8.5" fill="#3a2f22" font-family="Segoe UI">Fonusa Agung Mulia sweets plant</text>
+    <!-- factory on fire -->
+    <g transform="translate(206,30)">
+      <path d="M0,62 V30 L18,20 V30 L36,20 V30 L54,20 V62 Z" fill="#5d4037"/>
+      <rect x="60" y="4" width="10" height="58" fill="#5d4037"/>
+      <path d="M14,40 q8,-26 16,-34 q12,16 8,34z" fill="#e67e22"/><path d="M24,40 q4,-12 7,-18 q6,9 4,18z" fill="#f1c40f"/>
+      <path d="M64,2 q-6,-10 8,-16 q-2,8 10,8" fill="none" stroke="#7f8c8d" stroke-width="4" opacity=".7"/>
+    </g>
+    <g font-family="Segoe UI" font-weight="800">
+      <text x="210" y="112" font-size="20" fill="#b3261e" font-family="Georgia">3</text><text x="224" y="104" font-size="7.5" fill="#16130f">DEAD</text>
+      <text x="252" y="112" font-size="20" fill="#b3261e" font-family="Georgia">36</text><text x="276" y="104" font-size="7.5" fill="#16130f">MISSING</text>
+      <text x="210" y="125" font-size="8" fill="#3a2f22" font-weight="600">300 inside · 15 rescued</text>
+    </g>
+  </svg>
+  <span class="tag" style="background:var(--as)">ASIA · DISASTER</span><span class="loc"><span class="num">3</span>BANTEN, INDONESIA</span>
+  <h2>Candy factory fire: 3 dead, 36 missing</h2>
+  <p>A blaze west of Jakarta was still burning on Sunday; 300 workers were inside the three-storey plant, rescuers say.</p>
+  <div class="src">Al Jazeera · BBC · CNA · DW</div>
+</div>
+
+<!-- CARDS -->
+<div id="cards" class="abs">
+  <div class="card" style="border-color:var(--as)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><rect x="6" y="2" width="28" height="36" fill="#fff" stroke="#16130f" stroke-width="1.5"/><g stroke="#90a4ae" stroke-width="2"><path d="M10,10 h20 M10,16 h16 M10,22 h20"/></g><rect x="28" y="20" width="24" height="18" rx="2" fill="#b3261e"/><text x="40" y="33" font-size="10" font-weight="800" fill="#fff" text-anchor="middle" font-family="Segoe UI">AI</text></svg>
+      <div class="big">Quits</div><div class="bl">minister</div></div>
+    <div class="k" style="color:var(--as)"><span class="num">4</span>Seoul · Education</div>
+    <h3>Minister resigns over AI exam cheating</h3>
+    <p>Choi Kyo-jin quits; President Lee accepts.</p>
+  </div>
+  <div class="card" style="border-color:var(--me)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M6,30 l4,-10 h24 l6,10 v6 h-34 z" fill="#3e3a35"/><circle cx="14" cy="36" r="4" fill="#16130f"/><circle cx="34" cy="36" r="4" fill="#16130f"/><path d="M14,22 q4,-16 8,-20 q8,10 6,20z" fill="#e67e22"/><path d="M26,22 q4,-10 6,-14 q6,8 4,14z" fill="#f1c40f"/></svg>
+      <div class="big">12</div><div class="bl">cars burned</div></div>
+    <div class="k" style="color:var(--me)"><span class="num">5</span>West Bank</div>
+    <h3>Settlers attack Palestinian villages</h3>
+    <p>Cars torched, slurs sprayed near Ramallah.</p>
+  </div>
+  <div class="card" style="border-color:var(--eu)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><rect x="2" y="8" width="24" height="16" fill="#1f4e8c"/><g fill="#f1c40f" font-size="5" text-anchor="middle"><text x="14" y="14">★ ★</text><text x="14" y="21">★ ★</text></g><rect x="30" y="8" width="24" height="16" fill="#fff" stroke="#16130f"/><path d="M30,8 l24,16 M54,8 l-24,16 M42,8 v16 M30,16 h24" stroke="#b3261e" stroke-width="2.5"/><path d="M26,32 h4" stroke="#16130f" stroke-width="2"/><text x="28" y="38" font-size="9" font-weight="800" text-anchor="middle" font-family="Segoe UI">?</text></svg>
+      <div class="big">May</div><div class="bl">‘aghast’</div></div>
+    <div class="k" style="color:var(--eu)"><span class="num">6</span>London · Brexit</div>
+    <h3>Ex-PMs warn Burnham on EU</h3>
+    <p>May: ‘move on’; Miliband: closer ties give UK a say.</p>
+  </div>
+  <div class="card" style="border-color:var(--sp)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><g fill="#16130f"><path d="M14,36 h18 v-4 h-3 l-2,-10 a6,6 0 1 0 -8,0 l-2,10 h-3z"/></g><g fill="#fff" stroke="#16130f" stroke-width="1.5"><path d="M34,36 h18 v-4 h-3 l-1,-8 h3 v-6 h-3 v3 h-2 v-3 h-3 v3 h-2 v-3 h-3 v6 h3 l-1,8 h-3z"/></g></svg>
+      <div class="big">20 v 20</div><div class="bl">youngest ever</div></div>
+    <div class="k" style="color:var(--sp)"><span class="num">7</span>Geneva · Chess</div>
+    <h3>World title match opens</h3>
+    <p>Gukesh v Sindarov ceremony; game 1 on Tuesday.</p>
+  </div>
+  <div class="card" style="border-color:var(--sp)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M10,36 l22,-30 l5,4 l-22,30 z" fill="#c8a165" stroke="#16130f" stroke-width="1.2"/><circle cx="44" cy="30" r="7" fill="#b3261e" stroke="#16130f" stroke-width="1.2"/><path d="M39,27 q5,3 10,0" fill="none" stroke="#fff" stroke-width="1"/></svg>
+      <div class="big">720-9</div><div class="bl">declared</div></div>
+    <div class="k" style="color:var(--sp)"><span class="num">8</span>Wellington · Cricket</div>
+    <h3>India post record total in NZ</h3>
+    <p>Pant 128; NZ 119-2, trail by 233 after day 4.</p>
+  </div>
+  <div class="card" style="border-color:var(--sp)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M28,4 l-7,14 h14 z" fill="#fff" stroke="#16130f" stroke-width="1.5"/><path d="M21,18 h14" stroke="#16130f" stroke-width="2"/><circle cx="28" cy="21" r="4" fill="#16130f"/><path d="M28,25 v12" stroke="#16130f" stroke-width="2"/></svg>
+      <div class="big">21-11</div><div class="bl">2nd game</div></div>
+    <div class="k" style="color:var(--sp)"><span class="num">9</span>Hong Kong · Badminton</div>
+    <h3>Wang Zhiyi wins Hong Kong Open</h3>
+    <p>China’s Wang beats Thailand’s Pornpawee.</p>
+  </div>
+  <div class="card" style="border-color:var(--oc)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M14,38 v-22 a14,14 0 0 1 28,0 v22 z" fill="#d7ccc8" stroke="#16130f" stroke-width="1.5"/><path d="M28,14 v14 M22,20 h12" stroke="#16130f" stroke-width="2.5"/></svg>
+      <div class="big">92</div><div class="bl">aged</div></div>
+    <div class="k" style="color:var(--oc)"><span class="num">10</span>Sydney · Politics</div>
+    <h3>Fred Nile dies aged 92</h3>
+    <p>Ex-NSW MP led the Christian Democrats.</p>
+  </div>
+  <div class="card" style="border-color:var(--eu)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M20,2 l4,16 l-2,18 h8 l2,-18 l-4,-16 z" fill="#e0b48a" stroke="#16130f" stroke-width="1.2"/><circle cx="25" cy="19" r="6" fill="none" stroke="#b3261e" stroke-width="2.5"/><path d="M36,10 l10,-6 M38,18 h12 M36,26 l10,6" stroke="#b3261e" stroke-width="2"/></svg>
+      <div class="big">ACL</div><div class="bl">ruptured</div></div>
+    <div class="k" style="color:var(--eu)"><span class="num">11</span>Paris · Football</div>
+    <h3>PSG’s Doué out with knee injury</h3>
+    <p>Champions confirm torn cruciate ligament.</p>
+  </div>
+</div>
+
+<div id="maphead" class="abs"><span class="hd">WHERE IT HAPPENED</span> <span style="font-weight:600;color:var(--mute);letter-spacing:.02em">numbers match the stories</span></div>
+<svg id="map" class="abs" width="362" height="194" viewBox="0 0 362 194"></svg>
+
+<div id="listhead" class="abs"><span class="hd">ALSO ON SUNDAY 22 NOVEMBER</span></div>
+<div id="list" class="abs">
+  <div class="li"><span class="num">12</span><span><b>Finland</b> Coastguard fights fire on Sparta II overnight</span></div>
+  <div class="li"><span class="num">13</span><span><b>Geneva</b> Red Cross: soon ‘too late’ to curb AI weapons</span></div>
+  <div class="li"><span class="num">14</span><span><b>London</b> Reform deputy: Putin a ‘murderous dictator’</span></div>
+  <div class="li"><span class="num">15</span><span><b>London</b> Study: BoE directors profited from Cuban slavery</span></div>
+  <div class="li"><span class="num">16</span><span><b>Pyongyang</b> North Korea delays marathon to October</span></div>
+  <div class="li"><span class="num">17</span><span><b>Singapore</b> PM Wong to visit Australia from 23 Nov</span></div>
+  <div class="li"><span class="num">18</span><span><b>Nairobi</b> Internet-metering bill draws privacy fears</span></div>
+  <div class="li"><span class="num">19</span><span><b>Darfur</b> Displaced face winter as aid cuts loom</span></div>
+  <div class="li"><span class="num">20</span><span><b>Melbourne</b> Greens win injunction over fake vote cards</span></div>
+  <div class="li"><span class="num">21</span><span><b>UK</b> Union says it has lost confidence in UKRI chief</span></div>
+  <div class="li"><span class="num">22</span><span><b>UK</b> Food firms hail UK–EU deal on border checks</span></div>
+  <div class="li"><span class="num">23</span><span><b>BBC</b> Apology over Strictly noise disruption</span></div>
+  <div class="li"><span class="num">24</span><span><b>F1</b> Ferrari boss slams Leclerc–Hamilton clash</span></div>
+  <div class="li"><span class="num">25</span><span><b>F1</b> Verstappen: Russell ‘far below my level’</span></div>
+  <div class="li"><span class="num">26</span><span><b>Manchester</b> Fernandes: Utd contract talks on hold</span></div>
+  <div class="li"><span class="num">27</span><span><b>Munich</b> Bayern bosses criticised over Musiala</span></div>
+  <div class="li"><span class="num">28</span><span><b>Wellington</b> Pant hits 9th Test hundred</span></div>
+  <div class="li"><span class="num">29</span><span><b>Cricket</b> SA quicks ‘fired up’ for 2nd Bangladesh Test</span></div>
+  <div class="li"><span class="num">30</span><span><b>Antalya</b> Some COP31 decisions pass before split</span></div>
+  <div class="li"><span class="num">31</span><span><b>UK</b> Police launch cloned-number-plate tool</span></div>
+  <div class="li"><span class="num">32</span><span><b>California</b> Miley Cyrus marries Maxx Morando</span></div>
+  <div class="li"><span class="num">33</span><span><b>Seoul</b> Lee accepts education minister’s exit</span></div>
+</div>
+
+<div id="check" class="abs"><span class="rk">DATE CHECK</span> &nbsp;Left out as other days’ news — <b>Sat 21 Nov:</b> Iran strike on Bahrain · ‘El Chapo Isidro’ captured · BepiColombo reaches Mercury · NWSL final · France marches. <b>Fri 20 Nov:</b> UK–EU deal signed · Russian missiles hit Lviv. <b>Mon 23 Nov:</b> Paolo Bulgari’s funeral.</div>
+<div id="foot" class="abs">Every story here happened or was first reported on <b>Sunday 22 November 2026</b>, as the named outlets reported it. All maps and drawings are original vector art.</div>
+
+<script>
+// World map: hand-traced continent outlines in lon/lat, equirectangular projection.
+const W = 362, H = 194, LON0 = -130, LON1 = 180, LAT0 = 70, LAT1 = -46;
+const px = (lon, lat) => [((lon - LON0) / (LON1 - LON0)) * W, ((LAT0 - lat) / (LAT0 - LAT1)) * H];
+const land = [
+  [[-168,66],[-140,70],[-95,72],[-80,63],[-62,60],[-55,50],[-66,44],[-75,35],[-81,25],[-90,29],[-97,26],[-97,20],[-87,21],[-83,10],[-78,8],[-92,14],[-105,20],[-112,30],[-117,33],[-124,40],[-124,48],[-135,58],[-150,60],[-165,60]],
+  [[-55,60],[-45,60],[-20,70],[-20,76],[-60,76],[-70,76]],
+  [[-78,8],[-60,10],[-50,0],[-35,-6],[-40,-22],[-48,-27],[-58,-38],[-65,-55],[-72,-50],[-72,-30],[-70,-18],[-76,-14],[-81,-5]],
+  [[-10,36],[-9,43],[-1,44],[-4,48],[2,51],[8,54],[10,58],[5,62],[15,69],[28,71],[40,67],[60,68],[60,45],[40,45],[30,45],[28,41],[22,37],[18,40],[12,44],[8,44],[3,42],[-5,36]],
+  [[26,40],[36,36],[48,30],[57,25],[66,25],[72,20],[77,8],[80,15],[91,22],[97,17],[98,8],[104,1],[100,13],[106,10],[108,21],[117,23],[121,30],[122,40],[129,35],[135,43],[142,52],[160,58],[170,60],[180,66],[180,72],[140,74],[110,76],[80,74],[60,68],[40,67],[30,60],[30,45]],
+  [[35,28],[39,21],[43,12],[52,16],[59,22],[56,26],[51,24],[48,29],[44,32],[36,34]],
+  [[-17,21],[-10,30],[-5,36],[10,37],[20,32],[32,31],[35,28],[43,12],[51,12],[40,-2],[40,-15],[35,-25],[20,-35],[17,-29],[12,-13],[9,4],[-8,4],[-17,14]],
+  [[130,31],[141,36],[142,43],[140,41],[136,35],[130,33]],
+  [[95,5],[106,-6],[102,-4],[95,3]], [[109,1],[117,7],[119,0],[116,-4],[110,-3]], [[106,-6],[114,-8],[106,-7.5]],
+  [[131,-1],[141,-3],[150,-10],[141,-9],[132,-4]],
+  [[114,-22],[122,-17],[130,-12],[137,-12],[142,-11],[146,-19],[153,-26],[150,-37],[141,-38],[131,-31],[115,-34]],
+  [[-5,50],[1,51],[-2,56],[-5,58],[-6,55]], [[172,-35],[178,-38],[174,-41],[167,-46],[172,-43]], [[44,-25],[47,-25],[50,-15],[49,-12],[44,-17]]
+];
+// story pins: [number, lon, lat, colour]
+const pins = [
+  [1,30.7,36.9,'#37474f'],[2,30.3,50.8,'#1f4e8c'],[12,26.5,60.0,'#1f4e8c'],[3,106.2,-6.2,'#8e44ad'],[4,127.0,37.5,'#8e44ad'],
+  [5,35.2,31.9,'#c0392b'],[6,-0.1,51.5,'#1f4e8c'],[7,6.1,46.2,'#00838f'],[8,174.8,-41.3,'#00838f'],[9,114.2,22.3,'#00838f'],
+  [10,151.2,-33.9,'#d35400'],[11,2.35,48.85,'#1f4e8c'],[16,125.7,39.0,'#8e44ad'],[17,103.8,1.35,'#8e44ad'],[18,36.8,-1.3,'#c77c0e'],
+  [19,25.0,13.5,'#c77c0e'],[20,145.0,-37.8,'#d35400'],[27,11.6,48.1,'#1f4e8c'],[32,-118.3,34.1,'#2e7d32']
+];
+// Fit the masthead date to the page width.
+const dateEl = document.getElementById('date');
+for (let fs = 96; fs > 50 && dateEl.offsetWidth > 990; fs -= 1) dateEl.style.fontSize = fs + 'px';
+
+const svg = document.getElementById('map');
+let out = `<rect width="${W}" height="${H}" fill="#d9e7ee" stroke="#2a251f"/>`;
+for (const poly of land) out += `<polygon points="${poly.map(p => px(...p).map(v => v.toFixed(1)).join(',')).join(' ')}" fill="#ece3cf" stroke="#9b8d70" stroke-width=".7"/>`;
+for (const [n, lon, lat, c] of pins) {
+  const [x, y] = px(lon, lat);
+  out += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6.2" fill="${c}" stroke="#fff" stroke-width="1.2"/>` +
+         `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" font-size="${n > 9 ? 7 : 8}" font-weight="800" fill="#fff" text-anchor="middle" font-family="Segoe UI">${n}</text>`;
+}
+svg.innerHTML = out;
+</script>
+</body>
+</html>
