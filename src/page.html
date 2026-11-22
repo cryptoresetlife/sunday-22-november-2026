@@ -19,7 +19,7 @@
   #top .red { color: var(--red); }
   #date { left: 50%; transform: translateX(-50%); top: 34px; font-size: 80px; line-height: 92px; font-weight: 700; letter-spacing: -.025em; white-space: nowrap; }
   #sub { left: 14px; right: 14px; top: 130px; height: 20px; border-top: 1px solid var(--rule); border-bottom: 3px double var(--rule);
-         text-align: center; font-size: 11.5px; font-weight: 700; letter-spacing: .14em; line-height: 17px; }
+         text-align: center; font-size: 11.5px; font-weight: 700; letter-spacing: .07em; line-height: 17px; white-space: nowrap; }
   #lead { left: 14px; right: 14px; top: 154px; text-align: center; font-size: 19px; font-style: italic; white-space: nowrap; }
   #lead b { color: var(--red); font-style: normal; padding: 0 6px; }
 
@@ -57,7 +57,7 @@
   .hd { background: var(--ink); color: #fff; padding: 2px 6px; }
   #map { left: 14px; top: 766px; }
   #list { left: 386px; top: 766px; width: 624px; display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column;
-          grid-template-rows: repeat(11, 17.6px); column-gap: 12px; }
+          grid-template-rows: repeat(12, 16.15px); column-gap: 12px; }
   .li { display: flex; gap: 5px; align-items: center; font-size: 11px; line-height: 13px; border-bottom: 1px dotted #a99f8c; white-space: nowrap; overflow: hidden; }
   .li .num { flex: 0 0 17px; margin: 0; }
   .li b { font-weight: 800; white-space: nowrap; }
@@ -71,12 +71,12 @@
 
 <div id="top" class="abs"><span>THE WORLD ON ONE PAGE</span><span class="red">DAY 326 OF 2026</span><span>ALL TIMES UTC · RANKED BY CONSEQUENCE</span></div>
 <div id="date" class="abs serif">Sunday 22 November 2026</div>
-<div id="sub" class="abs">33 STORIES · 8 REGIONS · EVERY ONE HAPPENED OR WAS FIRST REPORTED ON SUNDAY 22 NOVEMBER 2026</div>
-<div id="lead" class="abs serif">COP31 deal rejected<b>◆</b>Drone strike buries 14 near Kyiv<b>◆</b>Indonesia factory fire: 36 missing</div>
+<div id="sub" class="abs">35 STORIES, ALL FROM SUNDAY 22 NOV · EUROPE 16 · ASIA 6 · OCEANIA 4 · MIDDLE EAST 3 · AFRICA 3 · AMERICAS 2 · GLOBAL 1</div>
+<div id="lead" class="abs serif">COP31 ends without a deal<b>◆</b>Strike on flats near Kyiv: 3 dead, 10 missing<b>◆</b>Banten fire: 36 missing</div>
 
 <div id="stats" class="abs">
   <div class="st"><span class="n">+2</span><span class="t">days past COP31’s Friday deadline</span></div>
-  <div class="st"><span class="n">14</span><span class="t">missing in Dymer flats, Zelensky says</span></div>
+  <div class="st"><span class="n">10</span><span class="t">still missing in Dymer; 3 bodies found</span></div>
   <div class="st"><span class="n">36</span><span class="t">missing after Banten factory fire</span></div>
   <div class="st"><span class="n">12</span><span class="t">cars torched by settlers (Wafa)</span></div>
   <div class="st"><span class="n">720</span><span class="t">India’s record Test total in NZ</span></div>
@@ -114,13 +114,13 @@
       <text x="9" y="62" font-size="9" font-style="italic" fill="#5a544b" font-family="Georgia">fossil fuels: no mention</text>
       <g transform="translate(62,78) rotate(-12)">
         <rect x="-52" y="-13" width="104" height="24" fill="none" stroke="#b3261e" stroke-width="3"/>
-        <text x="0" y="5" font-size="15" font-weight="800" fill="#b3261e" text-anchor="middle" font-family="Segoe UI" letter-spacing="2">REJECTED</text>
+        <text x="0" y="5" font-size="15" font-weight="800" fill="#b3261e" text-anchor="middle" font-family="Segoe UI" letter-spacing="2">NO DEAL</text>
       </g>
     </g>
   </svg>
   <span class="tag" style="background:var(--gl)">GLOBAL · CLIMATE</span><span class="loc"><span class="num">1</span>ANTALYA, TÜRKIYE</span>
-  <h2>COP31 talks break down as EU rejects deal</h2>
-  <p>The EU, UK and some developing nations reject a final text that omits fossil fuels; the longest climate summit yet ends deeply split.</p>
+  <h2>COP31 collapses: talks end without a deal</h2>
+  <p>First failed COP since Copenhagen 2009: the EU and others reject a text that omits fossil fuels; Guterres voices ‘profound frustration’.</p>
   <div class="src">Guardian · BBC · Al Jazeera</div>
 </div>
 
@@ -147,10 +147,11 @@
     <path d="M124,30 Q108,40 98,56" fill="none" stroke="#b3261e" stroke-width="1.5" stroke-dasharray="4 3"/>
     <text x="16" y="20" font-size="10" font-weight="800" fill="#1f4e8c" font-family="Segoe UI">DYMER, KYIV REGION</text>
     <!-- figures -->
-    <text x="168" y="54" font-size="34" font-weight="800" fill="#b3261e" font-family="Georgia">14</text>
-    <text x="212" y="40" font-size="10" font-weight="800" fill="#16130f" font-family="Segoe UI">MISSING UNDER</text>
-    <text x="212" y="53" font-size="10" font-weight="800" fill="#16130f" font-family="Segoe UI">THE RUBBLE</text>
-    <text x="168" y="70" font-size="9" fill="#3a2f22" font-family="Segoe UI">5-storey block hit overnight; 2 hurt</text>
+    <text x="166" y="54" font-size="34" font-weight="800" fill="#b3261e" font-family="Georgia">3</text>
+    <text x="188" y="40" font-size="9" font-weight="800" fill="#16130f" font-family="Segoe UI">DEAD</text>
+    <text x="226" y="54" font-size="34" font-weight="800" fill="#b3261e" font-family="Georgia">10</text>
+    <text x="266" y="40" font-size="9" font-weight="800" fill="#16130f" font-family="Segoe UI">MISSING</text>
+    <text x="166" y="70" font-size="9" fill="#3a2f22" font-family="Segoe UI">5-storey block partly collapsed</text>
     <!-- ship still burning off Finland -->
     <rect x="160" y="82" width="156" height="42" fill="#b9d2e0" stroke="#16130f" stroke-width=".8"/>
     <g transform="translate(170,108)"><path d="M0,0 h36 l-6,8 h-26 z" fill="#2c3e50"/><rect x="22" y="-7" width="8" height="7" fill="#2c3e50"/><path d="M8,-2 q3,-12 5,-14 q5,7 3,14z" fill="#e67e22"/></g>
@@ -159,9 +160,9 @@
     <text x="214" y="120" font-size="8.5" fill="#16130f" font-family="Segoe UI">still ablaze on Sunday</text>
   </svg>
   <span class="tag" style="background:var(--eu)">EUROPE · WAR</span><span class="loc"><span class="num">2</span>KYIV REGION, UKRAINE</span>
-  <h2>Drone strike buries 14 in flats near Kyiv</h2>
-  <p>Zelensky says at least 14 are missing after a Russian drone hit a five-storey block in Dymer; off Finland, the struck cargo ship Sparta II burns on.</p>
-  <div class="src">France 24 · Reuters · Al Jazeera</div>
+  <h2>Strike on flats near Kyiv: 3 dead, 10 missing</h2>
+  <p>A Russian attack partly collapses a block in Dymer; a drone kills 1 in Vyshneve. Zelensky urges the US to release paid-for Patriot missiles.</p>
+  <div class="src">Al Jazeera · France 24 · Interfax</div>
 </div>
 
 <!-- HERO 3: Indonesia -->
@@ -232,12 +233,12 @@
     <h3>India post record total in NZ</h3>
     <p>Pant 128; NZ 119-2, trail by 233 after day 4.</p>
   </div>
-  <div class="card" style="border-color:var(--sp)">
-    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M28,4 l-7,14 h14 z" fill="#fff" stroke="#16130f" stroke-width="1.5"/><path d="M21,18 h14" stroke="#16130f" stroke-width="2"/><circle cx="28" cy="21" r="4" fill="#16130f"/><path d="M28,25 v12" stroke="#16130f" stroke-width="2"/></svg>
-      <div class="big">21-11</div><div class="bl">2nd game</div></div>
-    <div class="k" style="color:var(--sp)"><span class="num">9</span>Hong Kong · Badminton</div>
-    <h3>Wang Zhiyi wins Hong Kong Open</h3>
-    <p>China’s Wang beats Thailand’s Pornpawee.</p>
+  <div class="card" style="border-color:var(--af)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><g fill="#16130f"><path d="M18,8 h20 l-4,4 h-12 z"/><rect x="10" y="7" width="10" height="2"/><rect x="36" y="7" width="10" height="2"/></g><path d="M28,12 l-4,12" stroke="#b3261e" stroke-width="1.5" stroke-dasharray="2 2"/><rect x="8" y="26" width="40" height="12" fill="#cfc8bb" stroke="#16130f"/><text x="28" y="35" font-size="7" font-weight="800" text-anchor="middle" font-family="Segoe UI">UN</text><path d="M18,26 q4,-8 8,-6 q4,-6 8,2" fill="#e67e22"/></svg>
+      <div class="big">4</div><div class="bl">killed</div></div>
+    <div class="k" style="color:var(--af)"><span class="num">9</span>Khartoum, Sudan</div>
+    <h3>Drones hit UN building, airport</h3>
+    <p>Attacks blamed on the RSF kill 4 around the capital.</p>
   </div>
   <div class="card" style="border-color:var(--oc)">
     <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M14,38 v-22 a14,14 0 0 1 28,0 v22 z" fill="#d7ccc8" stroke="#16130f" stroke-width="1.5"/><path d="M28,14 v14 M22,20 h12" stroke="#16130f" stroke-width="2.5"/></svg>
@@ -246,12 +247,12 @@
     <h3>Fred Nile dies aged 92</h3>
     <p>Ex-NSW MP led the Christian Democrats.</p>
   </div>
-  <div class="card" style="border-color:var(--eu)">
-    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M20,2 l4,16 l-2,18 h8 l2,-18 l-4,-16 z" fill="#e0b48a" stroke="#16130f" stroke-width="1.2"/><circle cx="25" cy="19" r="6" fill="none" stroke="#b3261e" stroke-width="2.5"/><path d="M36,10 l10,-6 M38,18 h12 M36,26 l10,6" stroke="#b3261e" stroke-width="2"/></svg>
-      <div class="big">ACL</div><div class="bl">ruptured</div></div>
-    <div class="k" style="color:var(--eu)"><span class="num">11</span>Paris · Football</div>
-    <h3>PSG’s Doué out with knee injury</h3>
-    <p>Champions confirm torn cruciate ligament.</p>
+  <div class="card" style="border-color:var(--af)">
+    <div class="ic"><svg width="56" height="40" viewBox="0 0 56 40"><path d="M0,28 q7,-4 14,0 t14,0 t14,0 t14,0 v12 h-56z" fill="#5c8fb0"/><path d="M14,24 h34 l-5,7 h-26 z" fill="#2c3e50"/><rect x="34" y="16" width="8" height="8" fill="#2c3e50"/><path d="M22,22 q4,-12 6,-14 q6,8 4,14z" fill="#e67e22"/><path d="M2,32 l9,-3" stroke="#b3261e" stroke-width="2.5"/></svg>
+      <div class="big">Libya</div><div class="bl">sea drone</div></div>
+    <div class="k" style="color:var(--af)"><span class="num">11</span>Benghazi, Libya</div>
+    <h3>Blast hits Russian ship at naval base</h3>
+    <p>Brief fire, injuries; eastern government probes.</p>
   </div>
 </div>
 
@@ -261,30 +262,32 @@
 <div id="listhead" class="abs"><span class="hd">ALSO ON SUNDAY 22 NOVEMBER</span></div>
 <div id="list" class="abs">
   <div class="li"><span class="num">12</span><span><b>Finland</b> Coastguard fights fire on Sparta II overnight</span></div>
-  <div class="li"><span class="num">13</span><span><b>Geneva</b> Red Cross: soon ‘too late’ to curb AI weapons</span></div>
-  <div class="li"><span class="num">14</span><span><b>London</b> Reform deputy: Putin a ‘murderous dictator’</span></div>
-  <div class="li"><span class="num">15</span><span><b>London</b> Study: BoE directors profited from Cuban slavery</span></div>
-  <div class="li"><span class="num">16</span><span><b>Pyongyang</b> North Korea delays marathon to October</span></div>
-  <div class="li"><span class="num">17</span><span><b>Singapore</b> PM Wong to visit Australia from 23 Nov</span></div>
-  <div class="li"><span class="num">18</span><span><b>Nairobi</b> Internet-metering bill draws privacy fears</span></div>
-  <div class="li"><span class="num">19</span><span><b>Darfur</b> Displaced face winter as aid cuts loom</span></div>
-  <div class="li"><span class="num">20</span><span><b>Melbourne</b> Greens win injunction over fake vote cards</span></div>
-  <div class="li"><span class="num">21</span><span><b>UK</b> Union says it has lost confidence in UKRI chief</span></div>
-  <div class="li"><span class="num">22</span><span><b>UK</b> Food firms hail UK–EU deal on border checks</span></div>
-  <div class="li"><span class="num">23</span><span><b>BBC</b> Apology over Strictly noise disruption</span></div>
-  <div class="li"><span class="num">24</span><span><b>F1</b> Ferrari boss slams Leclerc–Hamilton clash</span></div>
-  <div class="li"><span class="num">25</span><span><b>F1</b> Verstappen: Russell ‘far below my level’</span></div>
-  <div class="li"><span class="num">26</span><span><b>Manchester</b> Fernandes: Utd contract talks on hold</span></div>
-  <div class="li"><span class="num">27</span><span><b>Munich</b> Bayern bosses criticised over Musiala</span></div>
-  <div class="li"><span class="num">28</span><span><b>Wellington</b> Pant hits 9th Test hundred</span></div>
-  <div class="li"><span class="num">29</span><span><b>Cricket</b> SA quicks ‘fired up’ for 2nd Bangladesh Test</span></div>
-  <div class="li"><span class="num">30</span><span><b>Antalya</b> Some COP31 decisions pass before split</span></div>
-  <div class="li"><span class="num">31</span><span><b>UK</b> Police launch cloned-number-plate tool</span></div>
-  <div class="li"><span class="num">32</span><span><b>California</b> Miley Cyrus marries Maxx Morando</span></div>
-  <div class="li"><span class="num">33</span><span><b>Seoul</b> Lee accepts education minister’s exit</span></div>
+  <div class="li"><span class="num">13</span><span><b>Zaporizhzhia</b> Russian shelling kills a man</span></div>
+  <div class="li"><span class="num">14</span><span><b>Sanaa</b> Houthis: air raid hits fuel station, 6 hurt</span></div>
+  <div class="li"><span class="num">15</span><span><b>Tehran</b> Iran shows off dual-missile launcher</span></div>
+  <div class="li"><span class="num">16</span><span><b>London</b> Reform deputy: Putin a ‘murderous dictator’</span></div>
+  <div class="li"><span class="num">17</span><span><b>London</b> Tories vow to scrap Burnham’s EU deal</span></div>
+  <div class="li"><span class="num">18</span><span><b>Iowa</b> US Army to blow up explosives despite court order</span></div>
+  <div class="li"><span class="num">19</span><span><b>Geneva</b> Red Cross: soon ‘too late’ to curb AI weapons</span></div>
+  <div class="li"><span class="num">20</span><span><b>Pyongyang</b> North Korea delays marathon to October</span></div>
+  <div class="li"><span class="num">21</span><span><b>Singapore</b> PM Wong to visit Australia from 23 Nov</span></div>
+  <div class="li"><span class="num">22</span><span><b>Hong Kong</b> Polls held for Election Committee</span></div>
+  <div class="li"><span class="num">23</span><span><b>Nairobi</b> Internet-metering bill draws privacy fears</span></div>
+  <div class="li"><span class="num">24</span><span><b>Melbourne</b> Greens win injunction over fake vote cards</span></div>
+  <div class="li"><span class="num">25</span><span><b>London</b> Study: BoE directors profited from Cuban slavery</span></div>
+  <div class="li"><span class="num">26</span><span><b>UK</b> Centrica boss ‘hugely concerned’ over bills</span></div>
+  <div class="li"><span class="num">27</span><span><b>UK</b> RAF chief: next jet may be last crewed one</span></div>
+  <div class="li"><span class="num">28</span><span><b>Hong Kong</b> Wang Zhiyi wins badminton’s HK Open</span></div>
+  <div class="li"><span class="num">29</span><span><b>Paris</b> PSG’s Doué out with torn knee ligament</span></div>
+  <div class="li"><span class="num">30</span><span><b>F1</b> Ferrari boss slams Leclerc–Hamilton clash</span></div>
+  <div class="li"><span class="num">31</span><span><b>Manchester</b> Fernandes: Utd contract talks on hold</span></div>
+  <div class="li"><span class="num">32</span><span><b>Munich</b> Bayern bosses criticised over Musiala</span></div>
+  <div class="li"><span class="num">33</span><span><b>Wellington</b> Pant hits 9th Test hundred</span></div>
+  <div class="li"><span class="num">34</span><span><b>California</b> Miley Cyrus marries Maxx Morando</span></div>
+  <div class="li"><span class="num">35</span><span><b>UK</b> Police launch cloned-number-plate tool</span></div>
 </div>
 
-<div id="check" class="abs"><span class="rk">DATE CHECK</span> &nbsp;Left out as other days’ news — <b>Sat 21 Nov:</b> Iran strike on Bahrain · ‘El Chapo Isidro’ captured · BepiColombo reaches Mercury · NWSL final · France marches. <b>Fri 20 Nov:</b> UK–EU deal signed · Russian missiles hit Lviv. <b>Mon 23 Nov:</b> Paolo Bulgari’s funeral.</div>
+<div id="check" class="abs"><span class="rk">DATE CHECK</span> &nbsp;Left out as other days’ news — <b>Sat 21 Nov:</b> Iran strike on Bahrain · ‘El Chapo Isidro’ captured · BepiColombo reaches Mercury · NWSL final · France marches · Verstappen’s Las Vegas win (Sat night local). <b>Fri 20 Nov:</b> UK–EU deal signed · Russian missiles hit Lviv. <b>Mon 23 Nov:</b> Paolo Bulgari’s funeral.</div>
 <div id="foot" class="abs">Every story here happened or was first reported on <b>Sunday 22 November 2026</b>, as the named outlets reported it. All maps and drawings are original vector art.</div>
 
 <script>
@@ -308,9 +311,10 @@ const land = [
 // story pins: [number, lon, lat, colour]
 const pins = [
   [1,30.7,36.9,'#37474f'],[2,30.3,50.8,'#1f4e8c'],[12,26.5,60.0,'#1f4e8c'],[3,106.2,-6.2,'#8e44ad'],[4,127.0,37.5,'#8e44ad'],
-  [5,35.2,31.9,'#c0392b'],[6,-0.1,51.5,'#1f4e8c'],[7,6.1,46.2,'#00838f'],[8,174.8,-41.3,'#00838f'],[9,114.2,22.3,'#00838f'],
-  [10,151.2,-33.9,'#d35400'],[11,2.35,48.85,'#1f4e8c'],[16,125.7,39.0,'#8e44ad'],[17,103.8,1.35,'#8e44ad'],[18,36.8,-1.3,'#c77c0e'],
-  [19,25.0,13.5,'#c77c0e'],[20,145.0,-37.8,'#d35400'],[27,11.6,48.1,'#1f4e8c'],[32,-118.3,34.1,'#2e7d32']
+  [5,35.2,31.9,'#c0392b'],[6,-0.1,51.5,'#1f4e8c'],[7,6.1,46.2,'#00838f'],[8,174.8,-41.3,'#00838f'],[9,32.5,15.6,'#c77c0e'],
+  [10,151.2,-33.9,'#d35400'],[11,20.1,32.1,'#c77c0e'],[13,35.1,47.8,'#1f4e8c'],[14,44.2,15.4,'#c0392b'],[15,51.4,35.7,'#c0392b'],
+  [18,-91.0,41.0,'#2e7d32'],[20,125.7,39.0,'#8e44ad'],[21,103.8,1.35,'#8e44ad'],[22,114.2,22.3,'#8e44ad'],[23,36.8,-1.3,'#c77c0e'],
+  [24,145.0,-37.8,'#d35400'],[32,11.6,48.1,'#1f4e8c'],[34,-118.3,34.1,'#2e7d32']
 ];
 // Fit the masthead date to the page width.
 const dateEl = document.getElementById('date');
